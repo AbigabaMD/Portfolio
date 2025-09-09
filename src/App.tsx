@@ -1,13 +1,13 @@
 import './App.css';
 
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import Navbar from './pages/navBar';
 import  Hero from './pages/hero';
 import About  from './pages/about';
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className="min-h-screen bg-gradient-to-br from-cyan-100 to-green-100">
         {/* Navbar */}
         <Navbar />
@@ -22,7 +22,7 @@ function App() {
           </Routes>
         </main>
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
