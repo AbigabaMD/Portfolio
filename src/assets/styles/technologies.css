@@ -1,0 +1,41 @@
+
+.container{
+    
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    text-align: center;
+    overflow: hidden;
+    background:#240b40;
+}
+.para{
+    display:flex;
+    text-align: center;
+    padding: 2rem 3rem;
+    text-align: justify;
+    
+}
+
+.title{
+    font-size: 2rem;
+    font-weight: 400;
+    color: #fafaf8;
+    margin-top: 1.5rem;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  animation: marquee 30s linear infinite;
+}
+
+.animate-marquee.paused {
+  animation-play-state: paused;
+}
+
+.whitespace-nowrap {
+  white-space: nowrap;
+}
