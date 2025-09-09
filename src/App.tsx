@@ -7,7 +7,7 @@ import About  from './pages/about';
 
 function App() {
   return (
-    <BrowserRouter basename='/'>
+    <BrowserRouter basename='/Portfolio/'>
       <div className="min-h-screen bg-gradient-to-br from-cyan-100 to-green-100">
         {/* Navbar */}
         <Navbar />
