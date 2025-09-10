@@ -17,7 +17,7 @@ const About = () => {
   return (
     <section className="container pt-6 overflow-hidden">
       <div className="max-w-5xl mx-auto px-6 text-center">
-        <h2 className="title">Professional Summary</h2>
+        <h2 className="title">About</h2>
         <p className="text-sm font-light text-[#fff] para mb-12">
           I am a full-stack Software Engineer with 3+ years of experience building scalable web and mobile applications. Strong expertise in React, React Native, and TypeScript with proven backend experience using Python (Django, DRF) and relational databases (PostgreSQL, MySQL). Skilled in API design, containerization (Docker), and CI/CD pipelines (GitHub Actions, AWS). Adept at working in agile environments, delivering production-ready solutions, and collaborating across cross-functional teams.
         </p>
