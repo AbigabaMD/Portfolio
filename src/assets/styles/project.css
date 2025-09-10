@@ -1,0 +1,45 @@
+/* Projects.css */
+
+/* Container for horizontal scroll */
+.projects-scroll {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1.5rem; /* space between items */
+  overflow-x: auto;
+  padding: 0 1rem;
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* Firefox */
+}
+
+.containe{
+    padding: 2.5rem;
+}
+
+/* Hide scrollbar for Chrome, Edge, Safari */
+.projects-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* Project item */
+.project-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 96px;
+}
+
+/* Image styling */
+.project-item img {
+  width: 25rem; /* 96px */
+  height: 25rem; /* 96px */
+  object-fit: contain;
+  border-radius: 0.5rem; /* rounded-lg */
+  box-shadow: 0 4px 4px rgba(0,0,0,0.1);
+}
+
+/* Project name */
+.project-item span {
+  margin-top: 0.5rem;
+  font-weight: 500;
+  text-align: center;
+}

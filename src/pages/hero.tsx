@@ -11,7 +11,7 @@ const Hero = () => {
           Software Developer
         </h1>
 
-        <p className="font-light text-[20px] italic  text-[#374151] leading-relaxed mb-6">
+        <p className="font-light text-[17px] italic  text-[#374151] leading-relaxed mb-6">
           Building modern, scalable, and user-friendly <br />
           applications with passion and precision.<br /><br /><br />
         </p>
