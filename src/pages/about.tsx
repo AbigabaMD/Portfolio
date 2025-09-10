@@ -15,7 +15,7 @@ const About = () => {
   const [paused, setPaused] = useState(false);
 
   return (
-    <section className="container pt-6 overflow-hidden">
+    <section id="about" className="container pt-6 overflow-hidden">
       <div className="max-w-5xl mx-auto px-6 text-center">
         <h2 className="title">About Me</h2>
         <p className="text-sm font-light text-[#fff] para mb-12">

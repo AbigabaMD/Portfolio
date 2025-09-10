@@ -5,6 +5,8 @@ import Navbar from './pages/navBar';
 import  Hero from './pages/hero';
 import About  from './pages/about';
 import Projects from './pages/projects';
+import Certifications from './pages/certs';
+import Footer from './pages/footer';
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
          <Hero />
          <About/>
          <Projects/>
+         <Certifications/>
+         <Footer/>
         {/* Main content with spacing to avoid overlap with fixed navbar */}
         <main className="pt-24 px-4 md:px-6">
           <Routes>

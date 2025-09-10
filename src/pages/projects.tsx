@@ -1,19 +1,36 @@
 import { useRef, useEffect, useState } from "react";
-import '../assets/styles/project.css'; // Import the CSS
-import farmsellApp from '../assets/farmsell2.png';
-import farmsellWeb from '../assets/farmsell1.png';
-import fullnessApp from '../assets/fullness2.png';
+import "../assets/styles/project.css";
+import farmsellApp from "../assets/farmsell2.png";
+import farmsellWeb from "../assets/farmsell1.png";
+import fullnessApp from "../assets/fullness2.png";
 
 type SitesItem = {
   src: string;
   name: string;
+  description: string;
+  link: string;
 };
 
 const Projects = () => {
   const sites: SitesItem[] = [
-    { src: farmsellApp, name: "Farmsell App" },
-    { src: farmsellWeb, name: "Farmsell Web" },
-    { src: fullnessApp, name: "Fullness Web" },
+    {
+      src: farmsellApp,
+      name: "Farmsell App",
+      description: "Mobile app for agricultural sales and inventory tracking.",
+      link: "https://play.google.com/store/apps/details?id=com.farmsell",
+    },
+    {
+      src: farmsellWeb,
+      name: "Farmsell Web",
+      description: "Responsive web platform for farmers to sell produce.",
+      link: "https://farmsell.com",
+    },
+    {
+      src: fullnessApp,
+      name: "Fullness App",
+      description: "Health & nutrition tracking app for balanced diets.",
+      link: "https://fullnessapp.com",
+    },
   ];
 
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -23,12 +40,12 @@ const Projects = () => {
     const scrollContainer = scrollRef.current;
     if (!scrollContainer) return;
 
-    const speed = 1; // pixels per frame
+    const speed = 1;
 
     const scroll = () => {
       if (!isPaused) {
         if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth / 2) {
-          scrollContainer.scrollLeft = 0; // reset for seamless scroll
+          scrollContainer.scrollLeft = 0;
         } else {
           scrollContainer.scrollLeft += speed;
         }
@@ -40,28 +57,32 @@ const Projects = () => {
   }, [isPaused]);
 
   return (
-    <div className="containe">
-      {/* Page Title */}
+    <div id="projects" className="py-10 containe">
       <div className="flex justify-center mb-8">
-        <h1 className="text-3xl font-light">Projects Contributed On</h1>
+        <h1 className="projects-title">Projects I have Contributed On</h1>
       </div>
 
-      {/* Scrollable Image Gallery */}
       <div
         ref={scrollRef}
         className="projects-scroll"
         onMouseEnter={() => setIsPaused(true)}
         onMouseLeave={() => setIsPaused(false)}
       >
-        {/* Original items */}
         {sites.map((item, index) => (
-          <div key={index} className="project-item">
+          <a
+            key={index}
+            href={item.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="project-item"
+          >
             <img src={item.src} alt={item.name} />
-            <span>{item.name}</span>
-          </div>
+            <div className="project-overlay">
+              <h3 className="font-semibold">{item.name}</h3>
+              <p className="text-sm mt-1">{item.description}</p>
+            </div>
+          </a>
         ))}
-
-       
       </div>
     </div>
   );

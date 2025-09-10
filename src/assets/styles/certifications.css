@@ -1,0 +1,101 @@
+.certifications-page {
+  padding: 2rem;
+  text-align: center;
+}
+
+.page-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: #05386b;
+}
+
+.cert-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 1.5rem;
+  overflow-x: auto;
+  padding: 1rem;
+}
+
+/* === Flip Card Base === */
+.flip-card {
+  background: transparent;
+  width: 300px;
+  height: 180px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.7s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Front / Back shared styles */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+/* Front Side */
+.flip-card-front {
+  background: white;
+  color: #333;
+}
+
+/* Back Side */
+.flip-card-back {
+  background: rgba(239, 239, 239, 0.9);
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.cert-link {
+  background: white;
+  color: #144473;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.cert-link:hover {
+  background: #eee;
+}
+
+/* === Exclusive Animations === */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.animate-1 { animation: fadeUp 0.8s ease forwards; }
+.animate-2 { animation: slideLeft 0.8s ease forwards; animation-delay: 0.2s; }
+.animate-3 { animation: slideRight 0.8s ease forwards; animation-delay: 0.4s; }

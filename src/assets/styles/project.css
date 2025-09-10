@@ -1,5 +1,7 @@
 /* Projects.css */
-
+.containe{
+background-color: #fff;
+}
 /* Container for horizontal scroll */
 .projects-scroll {
   display: flex;
@@ -9,37 +11,66 @@
   padding: 0 1rem;
   scroll-behavior: smooth;
   scrollbar-width: none; /* Firefox */
+  
+
 }
 
-.containe{
-    padding: 2.5rem;
-}
-
-/* Hide scrollbar for Chrome, Edge, Safari */
 .projects-scroll::-webkit-scrollbar {
-  display: none;
+  display: none; /* Chrome, Safari */
 }
 
-/* Project item */
+/* Project item container */
 .project-item {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: 96px;
+  min-width: 120px;
+  cursor: pointer;
+  overflow: hidden;
 }
 
 /* Image styling */
 .project-item img {
   width: 25rem; /* 96px */
   height: 25rem; /* 96px */
-  object-fit: contain;
-  border-radius: 0.5rem; /* rounded-lg */
-  box-shadow: 0 4px 4px rgba(0,0,0,0.1);
+  object-fit:contain;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  background: rgb(233, 233, 233);
+  transition: transform 0.3s ease;
 }
 
-/* Project name */
-.project-item span {
-  margin-top: 0.5rem;
-  font-weight: 500;
+/* Hover scale */
+.project-item:hover img {
+  transform: scale(1.1);
+}
+
+.projects-title{
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #240b40;
+    padding: 25px;
+}
+/* Overlay container */
+.project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(158, 158, 187, 0.9); /* dark overlay */
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  padding: 2rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Show overlay on hover */
+.project-item:hover .project-overlay {
+  opacity: 1;
 }

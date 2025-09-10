@@ -11,14 +11,14 @@ const Hero = () => {
           Software Developer
         </h1>
 
-        <p className="font-light text-[17px] italic  text-[#374151] leading-relaxed mb-6">
+        <p className="">
           Building modern, scalable, and user-friendly <br />
           applications with passion and precision.<br /><br /><br />
         </p>
 
         <div className="flex gap-6">
           <button className="glass-btn">View Projects</button>
-          <button className="glass-btn">Contact Me</button>
+          <button className="glass-btn">View My Resume</button>
         </div>
       </div>
 
