@@ -3,6 +3,7 @@ import "../assets/styles/project.css";
 import farmsellApp from "../assets/farmsell2.png";
 import farmsellWeb from "../assets/farmsell1.png";
 import fullnessApp from "../assets/fullness2.png";
+import eliteWeb from "../assets/elite.png";
 
 type SitesItem = {
   src: string;
@@ -31,6 +32,13 @@ const Projects = () => {
       description: "Health & nutrition tracking app for balanced diets.",
       link: "https://fullnessapp.com",
     },
+
+    {
+        src:eliteWeb,
+        name:"Elite",
+        description:"A modern e-commerce platform for fashion enthusiasts.",
+        link:"https://elitefixers.com"
+    }
   ];
 
   const scrollRef = useRef<HTMLDivElement>(null);

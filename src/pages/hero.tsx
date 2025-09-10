@@ -17,8 +17,10 @@ const Hero = () => {
         </p>
 
         <div className="flex gap-6">
-          <button className="glass-btn">View Projects</button>
-          <button className="glass-btn">View My Resume</button>
+          
+          <button className="glass-btn"
+          onClick={() => window.open('/Portfolio/resume.pdf', '_blank')}
+          >View My Resume</button>
         </div>
       </div>
 
