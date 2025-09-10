@@ -1,9 +1,9 @@
 import { useRef, useEffect, useState } from "react";
 import "../assets/styles/project.css";
 import farmsellApp from "../assets/farmsell2.png";
-import farmsellWeb from "../assets/farmsell1.png";
-import fullnessApp from "../assets/fullness2.png";
-import eliteWeb from "../assets/elite.png";
+import farmsellWeb from "../assets/farmsells.jpg";
+import fullnessApp from "../assets/fullness.jpg";
+import eliteWeb from "../assets/elites.jpg";
 
 type SitesItem = {
   src: string;
